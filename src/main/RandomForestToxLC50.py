@@ -119,7 +119,7 @@ print('Testing Labels Shape:', test_labels.shape)
 
 t1 = time.time()
 # Instantiate model with 1000 decision trees
-rf = RandomForestRegressor(n_estimators = 1000, random_state = 42, n_jobs = 36)
+rf = RandomForestRegressor(n_estimators = 400, random_state = 42, n_jobs = 36)
 #rf = RandomForestRegressor(n_estimators = 1000, random_state = 42, n_jobs = 36, max_features = 0.5)
 #rf = RandomForestRegressor(n_estimators = 1000, random_state = 42, n_jobs = 36, oob_score = True)
 # Train the model on training data
