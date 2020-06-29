@@ -26,17 +26,10 @@ from pathlib import Path
 
 import RandomForest
 
-rfo_train = RandomForest()
+rf_train = RandomForest
 
-#path = Path.cwd().joinpath(filename)
-
-# Read in training data
-#path = Path.cwd().joinpath('data/DescriptorTextTables/LLNA_data_files/2d/LLNA_training_set-rnd5.csv')
-#train_features_pd = pd.read_csv(path)
-# In[26]:
-
-# Read in data and display first 5 rows
-train_features = rfo_train.readcsv("../data/LC50_training_set-2d.csv")
+# Read in data and display first 5 rowsj
+train_features = RandomForest.readcsv(rf_train, "../data/LC50_training_set-2d.csv")
 train_features.head()
 
 
@@ -57,8 +50,8 @@ train_features.describe()
 
 
 # Read in data and display first 5 rows
-rfo_test = RandomForest()
-test_features = rfo_test.readcsv('../data/LC50_prediction_set-2d.csv')
+rf_test = RandomForest
+test_features = RandomForest.readcsv(rf_test, '../data/LC50_prediction_set-2d.csv')
 test_features.head(5)
 
 

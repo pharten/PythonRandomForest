@@ -23,12 +23,13 @@ from math import sqrt
 
 from pathlib import Path
 
-path = Path.cwd()
+import RandomForest
 
-# Read in data and display first 5 rows
-train_features = pd.read_csv(path.joinpath('../data/LD50_training_set-2d.csv'))
-train_features.head(5)
+rf_train = RandomForest
 
+# Read in data and display first 5 rowsj
+train_features = RandomForest.readcsv(rf_train, "../data/LD50_training_set-2d.csv")
+train_features.head()
 
 # In[3]:
 
@@ -47,7 +48,8 @@ train_features.describe()
 
 
 # Read in data and display first 5 rows
-test_features = pd.read_csv(path.joinpath('../data/LD50_prediction_set-2d.csv'))
+rf_test = RandomForest
+test_features = RandomForest.readcsv(rf_test, '../data/LD50_prediction_set-2d.csv')
 test_features.head(5)
 
 
