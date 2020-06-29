@@ -36,7 +36,7 @@ rfo_train = RandomForest()
 # In[26]:
 
 # Read in data and display first 5 rows
-train_features = rfo_train.readcsv("../../data/LC50_training_set-2d.csv")
+train_features = rfo_train.readcsv("../data/LC50_training_set-2d.csv")
 train_features.head()
 
 
@@ -58,7 +58,7 @@ train_features.describe()
 
 # Read in data and display first 5 rows
 rfo_test = RandomForest()
-test_features = rfo_test.readcsv('../../data/LC50_prediction_set-2d.csv')
+test_features = rfo_test.readcsv('../data/LC50_prediction_set-2d.csv')
 test_features.head(5)
 
 

@@ -23,11 +23,10 @@ from math import sqrt
 
 from pathlib import Path
 
-path = Path.cwd().joinpath('../..')
-print(path)
+path = Path.cwd()
 
 # Read in data and display first 5 rows
-train_features = pd.read_csv(path.joinpath('data/LD50_training_set-2d.csv'))
+train_features = pd.read_csv(path.joinpath('../data/LD50_training_set-2d.csv'))
 train_features.head(5)
 
 
@@ -48,7 +47,7 @@ train_features.describe()
 
 
 # Read in data and display first 5 rows
-test_features = pd.read_csv(path.joinpath('data/LD50_prediction_set-2d.csv'))
+test_features = pd.read_csv(path.joinpath('../data/LD50_prediction_set-2d.csv'))
 test_features.head(5)
 
 

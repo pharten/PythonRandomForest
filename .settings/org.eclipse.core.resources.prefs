@@ -1,3 +1,3 @@
 eclipse.preferences.version=1
-encoding//src/main/RandomForestToxLC50.py=utf-8
-encoding//src/main/__pycache__/RandomForestToxLD50.py=utf-8
+encoding//main/RandomForestToxLC50.py=utf-8
+encoding//main/RandomForestToxLD50.py=utf-8

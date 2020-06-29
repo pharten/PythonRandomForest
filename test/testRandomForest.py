@@ -25,8 +25,6 @@ class TestRandomForest(unittest.TestCase):
     def test_readcsv2(self):
     	path = Path.cwd();
     	if path.name == "test":
-    		path = path.joinpath("../../data/LC50_training_set-2d.csv")
-    	elif path.name == "src":
     		path = path.joinpath("../data/LC50_training_set-2d.csv")
     	else:
     		path = path.joinpath("data/LC50_training_set-2d.csv")

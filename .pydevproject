@@ -6,5 +6,6 @@
 <path>/${PROJECT_DIR_NAME}/src</path>
 <path>/${PROJECT_DIR_NAME}/src/main</path>
 <path>/${PROJECT_DIR_NAME}/src/test</path>
+<path>/${PROJECT_DIR_NAME}/main</path>
 </pydev_pathproperty>
 </pydev_project>
