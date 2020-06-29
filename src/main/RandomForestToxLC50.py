@@ -24,7 +24,11 @@ from math import sqrt
 
 from pathlib import Path
 
-path = Path.cwd().joinpath('../..')
+import RandomForest
+
+rfo_train = RandomForest()
+
+#path = Path.cwd().joinpath(filename)
 
 # Read in training data
 #path = Path.cwd().joinpath('data/DescriptorTextTables/LLNA_data_files/2d/LLNA_training_set-rnd5.csv')
@@ -32,7 +36,7 @@ path = Path.cwd().joinpath('../..')
 # In[26]:
 
 # Read in data and display first 5 rows
-train_features = pd.read_csv(path.joinpath('data/LC50_training_set-2d.csv'))
+train_features = rfo_train.readcsv("../../data/LC50_training_set-2d.csv")
 train_features.head()
 
 
@@ -53,7 +57,8 @@ train_features.describe()
 
 
 # Read in data and display first 5 rows
-test_features = pd.read_csv(path.joinpath('data/LC50_prediction_set-2d.csv'))
+rfo_test = RandomForest()
+test_features = rfo_test.readcsv('../../data/LC50_prediction_set-2d.csv')
 test_features.head(5)
 
 

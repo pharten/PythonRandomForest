@@ -12,13 +12,28 @@ from pathlib import Path
 class TestRandomForest(unittest.TestCase):
     
     def test_readcsv1(self):
-        self.assertIsNotNone(rf.readcsv(self, "../../data/LC50_training_set-2d.csv")," no train_features")
-        
+    	filename = "temp"
+    	path = Path(filename)
+    	if path.exists():
+    		if path.is_file(): path.remove()
+    		elif path.is_dir(): path.rmdir()
+    	self.assertIsNotNone(rf.readcsv(self, filename)," file does not exist")
+    	path.mkdir()
+    	self.assertIsNotNone(rf.readcsv(self, filename)," file is a directory")
+    	path.rmdir()
+
     def test_readcsv2(self):
-        train_features = rf.readcsv(self, "../../data/LC50_training_set-2d.csv")
-        shape = train_features.shape
-        self.assertEqual(shape[0], 659,  " training set has wrong number of rows")
-        self.assertEqual(shape[1], 799,  " training set has wrong number of columns")
+    	path = Path.cwd();
+    	if path.name == "test":
+    		path = path.joinpath("../../data/LC50_training_set-2d.csv")
+    	elif path.name == "src":
+    		path = path.joinpath("../data/LC50_training_set-2d.csv")
+    	else:
+    		path = path.joinpath("data/LC50_training_set-2d.csv")
+    	train_features = rf.readcsv(self, path)
+    	shape = train_features.shape
+    	self.assertEqual(shape[0], 659,  " training set has wrong number of rows")
+    	self.assertEqual(shape[1], 799,  " training set has wrong number of columns")
         
 
 if __name__ == "__main__":
